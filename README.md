@@ -1,6 +1,6 @@
 #VIRTISpy
 
-A Python class for read and manipulate the VIRTIS-VEX data cubes.
+A Python class for read and manipulate the VIRTIS-VEX and VIRTIS-M-Rosetta data cubes.
 
 ***
 
