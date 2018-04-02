@@ -60,14 +60,15 @@ In the VIRTIS data set there are three different kind of files.
 	
 ***
 
-##3. VIRTISpy Methods:
+##3. read_VIRTIS Methods:
 
- __headerValue( _key_ )__ ( _key_  string ) return the value of the PDS label for the PDS the selected PDS keyword;  
- __getBand( _band_ )__ ( _band_ integer ) return a float matrix corresponding to the selected band;  
- __getSpectrum( _sample_ , _line_ )__ ( _sample_ integer; _line_ integer ) return an array containing the VIRTIS spectrum for the pixel at a specific sample and line;  
+ __init__(fn, mission, getHeader, getdata ) (fn string; mission string; getHeader boolean; getdata boolean)
+ __readHeader()__ return PDS label in dictionary structure;  
+ __getBand( band )__ ( band integer ) return a float matrix corresponding to the selected band;  
+ __getValue( band, sample, line)__ ( band integer; sample integer; line integer )return a values from corresponding selected band and spectrum.
+ __getSpectrum( sample , line )___ ( sample integer; line integer ) return an array containing the VIRTIS spectrum for the pixel at a specific sample and line;  
  __getWave()__ return an array containing the wavelength of each VIRTIS band;  
- __getHK( _key_ , _line_ )__ ( _key_ string, _line_ integer ) return the housekeeping value for the specific key and a specific line;  
- __getGeometry(  _plane_ )__ ( _plane_ integer or string ) return the geometry plane of the cube.
+ __getHK( val , line )__ ( key string; line integer ) return the housekeeping value for the specific key and a specific line;  
 
 
 ***  
@@ -89,8 +90,8 @@ To install from source, VIRTISpy-X.Y.Z.tar.gz from the [VIRTISpy GitHube site](h
 Create the VIRTISpy object:
 
 ```python
-	>>>from VIRTISpy import *
-	>>>cb=VIRTISpy('VV0000_00.CAL')
+	>>>from virtis import read_VIRTIS
+	>>>cb=read_VIRTIS('VV0000_00.CAL', 'ROSETTA', True, True)
 ```
 
 Visualize the spectrum of the pixel (100,100):
