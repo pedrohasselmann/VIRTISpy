@@ -62,10 +62,10 @@ In the VIRTIS data set there are three different kind of files.
 
 ##3. read_VIRTIS Methods:
 
- __init__(fn, mission, getHeader, getdata ) (fn string; mission string; getHeader boolean; getdata boolean)
+ __init__(fn, mission, getHeader, getdata ) (fn string; mission string; getHeader boolean; getdata boolean);  
  __readHeader()__ return PDS label in dictionary structure;  
  __getBand( band )__ ( band integer ) return a float matrix corresponding to the selected band;  
- __getValue( band, sample, line)__ ( band integer; sample integer; line integer )return a values from corresponding selected band and spectrum.
+ __getValue( band, sample, line)__ ( band integer; sample integer; line integer )return a values from corresponding selected band and spectrum;  
  __getSpectrum( sample , line )___ ( sample integer; line integer ) return an array containing the VIRTIS spectrum for the pixel at a specific sample and line;  
  __getWave()__ return an array containing the wavelength of each VIRTIS band;  
  __getHK( val , line )__ ( key string; line integer ) return the housekeeping value for the specific key and a specific line;  
