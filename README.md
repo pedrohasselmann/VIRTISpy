@@ -122,3 +122,4 @@ Visualize a picture:
 
 
 VIRTISpy was started by Romolo Politi in November 2011 as Python porting of the IDL VIRTISpds developped by Stefan Erard.
+VIRTISpy was updated by Pedro H. Hasselmann in April 2017 to work on the Rosetta mission data format.
